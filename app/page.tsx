@@ -1,17 +1,10 @@
+"use client"
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import PlanetPage from "./[planetName]/page";
-export default function Home() {
-    return (
-        <div>
-            <main>
-                <div>
+import { useEffect, useState } from "react";
 
-                </div>
-                <div>
-
-                </div>
-            </main>
-            <footer></footer>
-        </div>
+export default function PlanetPage() {
+    return(  
+        <div></div>
     );
 }
