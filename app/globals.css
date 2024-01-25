@@ -62,16 +62,17 @@ p {
     opacity: 0.5;
 }
 
-button:hover {
-    background-color: rgba(216, 216, 216, 0.2);
-}
-
 #wikipedia:hover {
     text-decoration: underline;
+    color: rgba(216, 216, 216, 0.2);
 }
 
-#linkHover:hover {
-    background-color: rgba(216, 216, 216, 0.2);
+#source {
+    color: rgba(216, 216, 216, 0.5);
+}
+#bordaOpaca {
+    border: 1;
+    border-color: rgba(216, 216, 216, 0.2);
 }
 
 .mercury:hover {
@@ -122,9 +123,24 @@ button:hover {
     border-style: groove;
 }
 
-
 @layer utilities {
     .text-balance {
         text-wrap: balance;
     }
+}
+
+@media (min-width: 1000px) {
+    button:hover {
+        background-color: rgba(216, 216, 216, 0.2);
+    }
+    #linkHover:hover {
+        background-color: rgba(216, 216, 216, 0.2);
+    }
+}
+
+@media (max-width: "700px"){
+    button:hover {
+        background-color: none;
+    }
+
 }
