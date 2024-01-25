@@ -73,15 +73,15 @@ export default function Overview() {
 
                         </div>
                         <div>
-                            <Link href={`http://127.0.0.1:3000/${planetName}/`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5" style={{ backgroundColor: cor_botoes }}>
+                            <Link id="linkHover" href={`http://127.0.0.1:3000/${planetName}/`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5" style={{ backgroundColor: cor_botoes }}>
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>01</h3>
                                 <h3 className="">OVERVIEW</h3>
                             </Link>
-                            <Link href={`http://127.0.0.1:3000/${planetName}/internal`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
+                            <Link id="linkHover" href={`http://127.0.0.1:3000/${planetName}/internal`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>02</h3>
                                 <h3>INTERNAL STRUCTURE</h3>
                             </Link>
-                            <Link href={`http://127.0.0.1:3000/${planetName}/geology`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
+                            <Link id="linkHover" href={`http://127.0.0.1:3000/${planetName}/geology`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
                                 <h3 className="mr-6 gray-700" style={{ color: "#fff", opacity: "0.5" }}>03</h3>
                                 <h3>SURFACE GEOLOGY</h3>
                             </Link>

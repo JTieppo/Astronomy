@@ -60,9 +60,8 @@ button:hover {
 #wikipedia:hover{
     text-decoration: underline;
 }
-#surface {
-    z-index: 10;
-    position: ;
+#linkHover:hover {
+    background-color: rgba(216, 216, 216, 0.2);
 }
 
 .mercury:hover {
