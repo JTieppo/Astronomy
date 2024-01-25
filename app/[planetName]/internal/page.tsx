@@ -12,7 +12,6 @@ export default function Surface() {
     const planetData = data.find(planet => planet.name.toLowerCase() == planetName);
     var srcImageTratado = planetData?.images.internal.slice(1);
     var srcImageTratadoPlanet = planetData?.images.internal.slice(1);
-    console.log(planetData);
     
 
     var [cor_botoes, setColor] = useState("");
@@ -47,8 +46,6 @@ export default function Surface() {
                 break;
         }
     }, [planetName]);
-
-    console.log(planetData);
 
     return(
         <div>

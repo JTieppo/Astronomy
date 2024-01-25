@@ -2,20 +2,17 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { data } from "../data";
 
 export default function Overview() {
     var path = usePathname();
-    console.log("path:", path);
     var planetName = path.slice(1);
-    console.log("considere esse", planetName);
 
 
     const planetData = data.find(planet => planet.name.toLowerCase() == planetName);
     var srcImageTratado = planetData?.images.geology.slice(1);
     var srcImageTratadoPlanet = planetData?.images.planet.slice(1);
-    console.log(planetData);
+
 
     var [cor_botoes, setColor] = useState("");
     useEffect(() => {

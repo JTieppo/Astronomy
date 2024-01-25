@@ -6,16 +6,12 @@ import Link from "next/link";
 
 export default function Surface() {
     var path = usePathname();
-    console.log("path", path);
     var pathParts = path.split('/geology');
-    console.log("parts", pathParts[0]);
     var planetName = pathParts[0].slice(1);
-    console.log("considere esse", planetName);
 
     const planetData = data.find(planet => planet.name.toLowerCase() == planetName);
     var srcImageTratado = planetData?.images.planet.slice(1);
     var srcImageTratadoPlanet = planetData?.images.geology.slice(1);
-    console.log(planetData);
     
 
     var [cor_botoes, setColor] = useState("");
@@ -51,7 +47,6 @@ export default function Surface() {
         }
     }, [planetName]);
 
-    console.log(planetData);
 
     return(
         <div>

@@ -14,7 +14,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     const path = usePathname();
-    const planetName = path.slice(1);
+    var pathParts = path.split('/');
+    var planetName = pathParts[1];
 
     const [activePlanet, setActivePlanet] = useState("");
 
