@@ -32,14 +32,14 @@ export default function RootLayout({
                 <header className="flex flex-row justify-between m-6 mx-10 align-baseline">
                     <Link href="/"><h2 className="text-4xl">THE PLANETS</h2></Link>
                     <div className="flex flex-row items-center">
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/mercury"}><h5 className={getPlanetClass(planetName)}>MERCURY</h5></Link>
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/venus"}><h5 className={getPlanetClass(planetName)}>VENUS</h5></Link>
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/earth"}><h5 className={getPlanetClass(planetName)}>EARTH</h5></Link>
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/mars"}><h5 className={getPlanetClass(planetName)}>MARS</h5></Link>
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/jupiter"}><h5 className={getPlanetClass(planetName)}>JUPITER</h5></Link>
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/saturn"}><h5 className={getPlanetClass(planetName)}>SATURN</h5></Link>
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/uranus"}><h5 className={getPlanetClass(planetName)}>URANUS</h5></Link>
-                        <Link className="ml-8" id="navlink" href={"http://127.0.0.1:3000/neptune"}><h5 className={getPlanetClass(planetName)}>NEPTUNE</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/mercury"}><h5 className={getPlanetClass(planetName)}>MERCURY</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/venus"}><h5 className={getPlanetClass(planetName)}>VENUS</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/earth"}><h5 className={getPlanetClass(planetName)}>EARTH</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/mars"}><h5 className={getPlanetClass(planetName)}>MARS</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/jupiter"}><h5 className={getPlanetClass(planetName)}>JUPITER</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/saturn"}><h5 className={getPlanetClass(planetName)}>SATURN</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/uranus"}><h5 className={getPlanetClass(planetName)}>URANUS</h5></Link>
+                        <Link className="ml-8" id="navlink" href={"https://astronomy-nine.vercel.app/neptune"}><h5 className={getPlanetClass(planetName)}>NEPTUNE</h5></Link>
                     </div>
                 </header>
                 {children}
