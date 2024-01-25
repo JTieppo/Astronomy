@@ -57,6 +57,39 @@ p {
 button:hover {
     background-color: rgba(216, 216, 216, 0.2);
 }
+#wikipedia:hover{
+    text-decoration: underline;
+}
+#surface {
+    z-index: 10;
+    position: ;
+}
+
+.mercury:hover {
+    color: #419EBB;
+}
+.venus:hover {
+    color: #EDA249;
+}
+.earth:hover {
+    color: #6D2ED5;
+}
+.mars:hover {
+    color: #D14C32;
+}
+.jupiter:hover {
+    color: #D83A34;
+}
+.saturn:hover {
+    color: #CD5120;
+}
+.uranus:hover {
+    color: #1EC1A2;
+}
+.neptune:hover {
+    color: #2D68F0;
+}
+
 
 @layer utilities {
   .text-balance {

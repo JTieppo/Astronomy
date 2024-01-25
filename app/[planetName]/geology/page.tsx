@@ -1,21 +1,22 @@
 "use client"
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { data } from "../data";
+import { data } from "@/app/data";
+import Link from "next/link";
 
-export default function Overview() {
+export default function Surface() {
     var path = usePathname();
-    console.log("path:", path);
-    var planetName = path.slice(1);
+    console.log("path", path);
+    var pathParts = path.split('/geology');
+    console.log("parts", pathParts[0]);
+    var planetName = pathParts[0].slice(1);
     console.log("considere esse", planetName);
 
-
     const planetData = data.find(planet => planet.name.toLowerCase() == planetName);
-    var srcImageTratado = planetData?.images.geology.slice(1);
-    var srcImageTratadoPlanet = planetData?.images.planet.slice(1);
+    var srcImageTratado = planetData?.images.planet.slice(1);
+    var srcImageTratadoPlanet = planetData?.images.geology.slice(1);
     console.log(planetData);
+    
 
     var [cor_botoes, setColor] = useState("");
     useEffect(() => {
@@ -50,6 +51,8 @@ export default function Overview() {
         }
     }, [planetName]);
 
+    console.log(planetData);
+
     return(
         <div>
             
@@ -57,23 +60,24 @@ export default function Overview() {
 
             <div className="flex flex-col justify-around h-screen ml-20 mr-14">
                 <div className="flex flex-row justify-between mr-16">
-                    <div className="mx-auto my-auto w-4/12">
-                        <img className="mx-auto" src={srcImageTratadoPlanet} alt="" />
+                    <div className="mx-auto my-auto w-4/12 relative">
+                        <img className="mx-auto " src={srcImageTratado} alt="" />
+                        <img className="mx-auto absolute w-4/12" id="surface" src={srcImageTratadoPlanet} alt="" style={{ top: '90%', left: '50%', transform: 'translate(-50%, -50%)' }}/>
                     </div>
                     <div className="w-96">
                         <div className="mb-5">
                             <h1 className="text-7xl">{planetData?.name}</h1>
                         </div>
                         <div className="mb-4">
-                            <h4>{planetData?.overview.content}</h4>
+                            <h4>{planetData?.geology.content}</h4>
                         </div>
                         <div className="flex flex-row mb-8">
                             <h4>Source:</h4>
-                            <Link className="flex flex-row ml-3" href={planetData.overview.source} id="wikipedia">Wikipedia <img className="ml-3" src="./assets/icon-source.svg" alt="" /></Link>
+                            <Link className="flex flex-row ml-3" href={planetData.geology.source} id="wikipedia">Wikipedia <img className="ml-3" src="./assets/icon-source.svg" alt="" /></Link>
 
                         </div>
                         <div>
-                            <Link href={`http://127.0.0.1:3000/${planetName}/`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5" style={{ backgroundColor: cor_botoes }}>
+                            <Link href={`http://127.0.0.1:3000/${planetName}`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>01</h3>
                                 <h3 className="">OVERVIEW</h3>
                             </Link>
@@ -81,7 +85,7 @@ export default function Overview() {
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>02</h3>
                                 <h3>INTERNAL STRUCTURE</h3>
                             </Link>
-                            <Link href={`http://127.0.0.1:3000/${planetName}/geology`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
+                            <Link href={`http://127.0.0.1:3000/${planetName}/geology`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5" style={{ backgroundColor: cor_botoes }}>
                                 <h3 className="mr-6 gray-700" style={{ color: "#fff", opacity: "0.5" }}>03</h3>
                                 <h3>SURFACE GEOLOGY</h3>
                             </Link>

@@ -1,21 +1,19 @@
 "use client"
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { data } from "../data";
+import { data } from "@/app/data";
+import Link from "next/link";
 
-export default function Overview() {
+export default function Surface() {
     var path = usePathname();
-    console.log("path:", path);
-    var planetName = path.slice(1);
-    console.log("considere esse", planetName);
-
+    var pathParts = path.split('/internal');
+    var planetName = pathParts[0].slice(1);
 
     const planetData = data.find(planet => planet.name.toLowerCase() == planetName);
-    var srcImageTratado = planetData?.images.geology.slice(1);
-    var srcImageTratadoPlanet = planetData?.images.planet.slice(1);
+    var srcImageTratado = planetData?.images.internal.slice(1);
+    var srcImageTratadoPlanet = planetData?.images.internal.slice(1);
     console.log(planetData);
+    
 
     var [cor_botoes, setColor] = useState("");
     useEffect(() => {
@@ -50,6 +48,8 @@ export default function Overview() {
         }
     }, [planetName]);
 
+    console.log(planetData);
+
     return(
         <div>
             
@@ -65,19 +65,19 @@ export default function Overview() {
                             <h1 className="text-7xl">{planetData?.name}</h1>
                         </div>
                         <div className="mb-4">
-                            <h4>{planetData?.overview.content}</h4>
+                            <h4>{planetData?.structure.content}</h4>
                         </div>
                         <div className="flex flex-row mb-8">
                             <h4>Source:</h4>
-                            <Link className="flex flex-row ml-3" href={planetData.overview.source} id="wikipedia">Wikipedia <img className="ml-3" src="./assets/icon-source.svg" alt="" /></Link>
+                            <Link className="flex flex-row ml-3" href={planetData.structure.source} id="wikipedia">Wikipedia <img className="ml-3" src="./assets/icon-source.svg" alt="" /></Link>
 
                         </div>
                         <div>
-                            <Link href={`http://127.0.0.1:3000/${planetName}/`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5" style={{ backgroundColor: cor_botoes }}>
+                            <Link href={`http://127.0.0.1:3000/${planetName}`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>01</h3>
                                 <h3 className="">OVERVIEW</h3>
                             </Link>
-                            <Link href={`http://127.0.0.1:3000/${planetName}/internal`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5">
+                            <Link href={`http://127.0.0.1:3000/${planetName}/internal`} className="flex flex-row border border-[#838391] p-3 w-96 mb-5" style={{ backgroundColor: cor_botoes }}>
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>02</h3>
                                 <h3>INTERNAL STRUCTURE</h3>
                             </Link>
