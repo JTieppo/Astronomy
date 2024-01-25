@@ -23,7 +23,7 @@ export default function RootLayout({
         setActivePlanet(planetName);
     }, [planetName]);
 
-    const getPlanetClass = (planet) => {
+    const getPlanetClass = (planet: string) => {
         return planet === activePlanet ? `${planet} active` : planet;
     };
     return (
