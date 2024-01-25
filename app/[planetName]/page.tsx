@@ -69,7 +69,7 @@ export default function Overview() {
                         </div>
                         <div className="flex flex-row mb-8">
                             <h4>Source:</h4>
-                            <Link className="flex flex-row ml-3" href={planetData.overview.source} id="wikipedia">Wikipedia <img className="ml-3" src="./assets/icon-source.svg" alt="" /></Link>
+                            <Link className="flex flex-row ml-3" href={planetData.overview.source} id="wikipedia">Wikipedia <img className="ml-3" src="../assets/icon-source.svg" alt="" /></Link>
 
                         </div>
                         <div>
