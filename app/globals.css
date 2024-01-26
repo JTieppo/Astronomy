@@ -18,7 +18,7 @@
 }
 
 
-body {
+html, body {
     color: #fff;
     background: #070724;
 
@@ -26,6 +26,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    
+    max-width: 100vw;
+    max-height: 80vw;
+    margin: 0 auto;
 }
 
 h1 {

@@ -43,7 +43,7 @@ export default function RootLayout({
                     <Link href="/mercury"><h2 className="text-4xl m-4">THE PLANETS</h2></Link>
                     <div className="flex flex-row items-center h-full jus">
                         <div className="m-10"></div>
-                        <div className={`p-6 h-full border-t-2 border-hidden ${getPlanetClass(planetName)}`}><Link className="" id="navlink" href={"/mercury"}><h5 className={getPlanetClass(planetName)}>MERCURY</h5></Link></div>
+                        <div className={`p-6 h-full border-t-2 border-hidden ${getPlanetClass(planetName)}`}><Link className="" id="navlink" href={"/"}><h5 className={getPlanetClass(planetName)}>MERCURY</h5></Link></div>
                         <div className={`p-6 h-full border-t-2 border-hidden ${getPlanetClass(planetName)}`}><Link className="" id="navlink" href={"/venus"}><h5 className={getPlanetClass(planetName)}>VENUS</h5></Link></div>
                         <div className={`p-6 h-full border-t-2 border-hidden ${getPlanetClass(planetName)}`}><Link className="" id="navlink" href={"/earth"}><h5 className={getPlanetClass(planetName)}>EARTH</h5></Link></div>
                         <div className={`p-6 h-full border-t-2 border-hidden ${getPlanetClass(planetName)}`}><Link className="" id="navlink" href={"/mars"}><h5 className={getPlanetClass(planetName)}>MARS</h5></Link></div>
@@ -60,7 +60,7 @@ export default function RootLayout({
                     <button className="ml-6" onClick={mostraMenu}><img className="mr-4" src="assets/icon-hamburger.svg" alt="" /></button>
                 </header>
                 <div className={`${valorMenu} lg:hidden flex-col`}>
-                    <div className={`p-6 h-full border-t-2 border-hidden flex flex-row ${getPlanetClass(planetName)}`}><div className="p-3 rounded-full" style={{backgroundColor:"#419EBB"}}></div><Link className="ml-6"  id="navlink" onClick={mostraMenu} href={"/mercury"}><h5 className={getPlanetClass(planetName)}>MERCURY</h5></Link></div>
+                    <div className={`p-6 h-full border-t-2 border-hidden flex flex-row ${getPlanetClass(planetName)}`}><div className="p-3 rounded-full" style={{backgroundColor:"#419EBB"}}></div><Link className="ml-6"  id="navlink" onClick={mostraMenu} href={"/"}><h5 className={getPlanetClass(planetName)}>MERCURY</h5></Link></div>
                     <div className={`p-6 h-full border-t-2 border-hidden flex flex-row ${getPlanetClass(planetName)}`}><div className="p-3 rounded-full" style={{backgroundColor:"#EDA249"}}></div><Link className="ml-6"  id="navlink" onClick={mostraMenu} href={"/venus"}><h5 className={getPlanetClass(planetName)}>VENUS</h5></Link></div>
                     <div className={`p-6 h-full border-t-2 border-hidden flex flex-row ${getPlanetClass(planetName)}`}><div className="p-3 rounded-full" style={{backgroundColor:"#6D2ED5"}}></div><Link className="ml-6"  id="navlink" onClick={mostraMenu} href={"/earth"}><h5 className={getPlanetClass(planetName)}>EARTH</h5></Link></div>
                     <div className={`p-6 h-full border-t-2 border-hidden flex flex-row ${getPlanetClass(planetName)}`}><div className="p-3 rounded-full" style={{backgroundColor:"#D14C32"}}></div><Link className="ml-6"  id="navlink" onClick={mostraMenu} href={"/mars"}><h5 className={getPlanetClass(planetName)}>MARS</h5></Link></div>
