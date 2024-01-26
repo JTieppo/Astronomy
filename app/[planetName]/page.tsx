@@ -48,7 +48,7 @@ export default function Overview() {
     }, [planetName]);
 
     return(
-        <div>
+        <div className="">
             <div className="border"></div>
             <div className="flex flex-row lg:hidden justify-around">
                 <Link id="linkHover" href={`/${planetName}/`} className="flex flex-col p-4">
