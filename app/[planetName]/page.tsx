@@ -74,25 +74,25 @@ export default function Overview() {
                         <img className="mx-auto" src={srcImageTratadoPlanet} alt="" />
                     </div>
                     <div className="lg:w-96">
-                        <div className="mb-5">
+                        <div className="mb-8 xl:mb-15 2xl:mb-20">
                             <h1 className="text-6xl text-center lg:text-start lg:text-7xl">{planetData?.name}</h1>
                         </div>
                         <div className="mb-4">
                             <h4 className="text-center lg:text-left">{planetData?.overview.content}</h4>
                         </div>
-                        <div className="flex flex-row mb-8">
+                        <div className="flex flex-row mb-8 xl:mb-15 2xl:mb-20">
                             <Link className="flex flex-row mx-auto lg:mx-0" href={planetData?.overview?.source ?? 'defaultSource'} id="wikipedia"><h4 id="source">Source: Wikipedia </h4><img className="ml-3" src="../assets/icon-source.svg" alt="" /></Link>
                         </div>
                         <div className="hidden lg:flex flex-col">
-                            <Link id="" href={`/${planetName}/`} className="flex flex-row p-3 w-96 mb-5" style={{ backgroundColor: cor_botoes }}>
+                            <Link id="" href={`/${planetName}/`} className="flex flex-row p-3 w-96 mb-5 2xl:mb-10" style={{ backgroundColor: cor_botoes }}>
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>01</h3>
                                 <h3 className="">OVERVIEW</h3>
                             </Link>
-                            <Link id="linkHover" href={`/${planetName}/internal`} className="flex flex-row border border-[#d8d8d833] p-3 w-96 mb-5">
+                            <Link id="linkHover" href={`/${planetName}/internal`} className="flex flex-row border border-[#d8d8d833] p-3 w-96 mb-5 2xl:mb-10">
                                 <h3 className="mr-6" style={{ color: "#fff", opacity: "0.5" }}>02</h3>
                                 <h3>INTERNAL STRUCTURE</h3>
                             </Link>
-                            <Link id="linkHover" href={`/${planetName}/geology`} className="flex flex-row border border-[#d8d8d833] p-3 w-96">
+                            <Link id="linkHover" href={`/${planetName}/geology`} className="flex flex-row border border-[#d8d8d833] p-3 w-96 mb-5 2xl:mb-10">
                                 <h3 className="mr-6 gray-700" style={{ color: "#fff", opacity: "0.5" }}>03</h3>
                                 <h3>SURFACE GEOLOGY</h3>
                             </Link>
