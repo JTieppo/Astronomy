@@ -72,10 +72,9 @@ export default function Surface() {
             <div className="flex flex-col mt-20 m-4 h-screen lg:mt-0 lg:ml-20 lg:mr-14">
                 <div className="flex flex-col m-1 lg:m-14 lg:flex-row justify-between lg:mr-16">
                     <div className="mx-auto my-auto w-6/12 lg:w-4/12">
-                        <div className="lg:w-10/12 mx-auto">
+                        <div className="lg:w-10/12 mx-auto relative mb-16 lg:mb-0">
                             <img className="mx-auto " src={srcImageTratado} alt=""/>
-                            <img className="hidden lg:flex mx-auto lg:w-4/12" id="surface" src={srcImageTratadoPlanet} alt="" style={{ top: '80%', left: '50%', transform: 'translate(-0%, -70%)'}}/>
-                            <img className="lg:hidden mx-auto w-6/12" id="surface" src={srcImageTratadoPlanet} alt="" style={{ top: '80%', left: '50%', transform: 'translate(-0%, -70%)' }}/>
+                            <img className="mx-auto absolute w-6/12" id="surface" src={srcImageTratadoPlanet} alt="" style={{ top: '90%', left: '50%', transform: 'translate(-50%, -50%)' }}/>
                         </div>
                     </div>
                     <div className="lg:w-96">
