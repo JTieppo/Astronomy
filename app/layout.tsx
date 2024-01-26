@@ -40,7 +40,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <header className="hidden lg:flex flex-row justify-between mx-10 align-baseline">
-                    <Link href="/"><h2 className="text-4xl m-4">THE PLANETS</h2></Link>
+                    <Link href="/mercury"><h2 className="text-4xl m-4">THE PLANETS</h2></Link>
                     <div className="flex flex-row items-center h-full jus">
                         <div className="m-10"></div>
                         <div className={`p-6 h-full border-t-2 border-hidden ${getPlanetClass(planetName)}`}><Link className="" id="navlink" href={"/mercury"}><h5 className={getPlanetClass(planetName)}>MERCURY</h5></Link></div>
@@ -56,7 +56,7 @@ export default function RootLayout({
 
 
                 <header className="flex flex-row justify-between lg:hidden">
-                    <Link className={`${valorNome} ml-3`} href="/"><h2 className="text-4xl m-4">THE PLANETS</h2></Link>
+                    <Link className={`${valorNome} ml-3`} href="/mercury"><h2 className="text-4xl m-4">THE PLANETS</h2></Link>
                     <button className="ml-6" onClick={mostraMenu}><img className="mr-4" src="assets/icon-hamburger.svg" alt="" /></button>
                 </header>
                 <div className={`${valorMenu} lg:hidden flex-col`}>
