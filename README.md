@@ -1,15 +1,15 @@
-<p>Website dinâmico e informativo, O site oferece um tour cativante pelos planetas do nosso sistema solar, apresentando um resumo de cada um. Desenvolvido com as tecnologias mais recentes de front-end, como:
-</p>
+<p>A dynamic and informative website, the site offers a captivating tour of the planets in our solar system, featuring a summary of each one. Developed using the latest front-end technologies, including:</p>
 
-* Next.js.
-* com React.
-* TypeScript.
-* tailwindcss.
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+  
+<p>The use of these technologies ensures a user-friendly interface and a responsive design, which adapts seamlessly to different screen sizes, providing a pleasant browsing experience on both mobile devices and desktops. Each planet is presented with concise yet rich information, allowing site visitors to quickly learn about the unique characteristics of each one.</p>
 
-A utilização garante uma interface user-friendly e design responsivo, que se adapta perfeitamente a diferentes tamanhos de tela, proporcionando uma experiência de navegação agradável tanto em dispositivos móveis quanto em desktops. Cada planeta é apresentado com informações concisas, mas ricas, permitindo aos visitantes do site aprender rapidamente sobre as características únicas de cada um.
+<a href="https://astronomy-sand.vercel.app">See on your own device</a>
 
 <img src="public/img/desktop.png"></img>
 <div>
-  -------------------------------------------------------------------------------------------------------------------------------------------
 </div>
 <img src="public/img/mobile.png"></img>
